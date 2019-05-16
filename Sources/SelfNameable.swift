@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SelfNameable { }
+public protocol SelfNameable { }
 
 public extension SelfNameable {
     

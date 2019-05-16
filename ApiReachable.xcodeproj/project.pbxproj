@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2BD1D44622466E0700D3F074 /* ApiReachable.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BD1D44422466E0700D3F074 /* ApiReachable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BD1D46F22466E5800D3F074 /* SelfNameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1D46E22466E5800D3F074 /* SelfNameable.swift */; };
+		2BD1D4922246734F00D3F074 /* ApiReachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1D4912246734F00D3F074 /* ApiReachable.swift */; };
+		545484AE18DDF942E3D01A00 /* Pods_ApiReachable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F547DAC9B78E8910DFAD70 /* Pods_ApiReachable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +18,10 @@
 		2BD1D44422466E0700D3F074 /* ApiReachable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiReachable.h; sourceTree = "<group>"; };
 		2BD1D44522466E0700D3F074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BD1D46E22466E5800D3F074 /* SelfNameable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfNameable.swift; sourceTree = "<group>"; };
+		2BD1D4912246734F00D3F074 /* ApiReachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiReachable.swift; sourceTree = "<group>"; };
+		3074C12D7A53F2D9235FA189 /* Pods-ApiReachable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiReachable.release.xcconfig"; path = "Target Support Files/Pods-ApiReachable/Pods-ApiReachable.release.xcconfig"; sourceTree = "<group>"; };
+		73F547DAC9B78E8910DFAD70 /* Pods_ApiReachable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiReachable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D40F6D842934AD1461CD5C1F /* Pods-ApiReachable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiReachable.debug.xcconfig"; path = "Target Support Files/Pods-ApiReachable/Pods-ApiReachable.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				545484AE18DDF942E3D01A00 /* Pods_ApiReachable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +41,8 @@
 			children = (
 				2BD1D46D22466E3700D3F074 /* Sources */,
 				2BD1D44222466E0700D3F074 /* Products */,
+				B8C024C1045A5A15B54E2488 /* Pods */,
+				2D5C1A2ACABE5C806BC7AB01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,9 +59,27 @@
 			children = (
 				2BD1D44422466E0700D3F074 /* ApiReachable.h */,
 				2BD1D44522466E0700D3F074 /* Info.plist */,
+				2BD1D4912246734F00D3F074 /* ApiReachable.swift */,
 				2BD1D46E22466E5800D3F074 /* SelfNameable.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		2D5C1A2ACABE5C806BC7AB01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73F547DAC9B78E8910DFAD70 /* Pods_ApiReachable.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8C024C1045A5A15B54E2488 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D40F6D842934AD1461CD5C1F /* Pods-ApiReachable.debug.xcconfig */,
+				3074C12D7A53F2D9235FA189 /* Pods-ApiReachable.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,6 +100,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BD1D44922466E0700D3F074 /* Build configuration list for PBXNativeTarget "ApiReachable" */;
 			buildPhases = (
+				7781B4756BFAD69B5253C138 /* [CP] Check Pods Manifest.lock */,
 				2BD1D43C22466E0700D3F074 /* Headers */,
 				2BD1D43D22466E0700D3F074 /* Sources */,
 				2BD1D43E22466E0700D3F074 /* Frameworks */,
@@ -129,11 +157,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7781B4756BFAD69B5253C138 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApiReachable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2BD1D43D22466E0700D3F074 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD1D4922246734F00D3F074 /* ApiReachable.swift in Sources */,
 				2BD1D46F22466E5800D3F074 /* SelfNameable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +319,7 @@
 		};
 		2BD1D44A22466E0700D3F074 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D40F6D842934AD1461CD5C1F /* Pods-ApiReachable.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -276,6 +331,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -285,13 +341,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		2BD1D44B22466E0700D3F074 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3074C12D7A53F2D9235FA189 /* Pods-ApiReachable.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -303,6 +360,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gearmamn06.ApiReachable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
