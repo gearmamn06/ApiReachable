@@ -96,7 +96,7 @@ public extension ApiReachable where Self: BaseMappable {
 }
 
 
-public extension ApiReachable where Self: Codable {
+public extension ApiReachable where Self: Decodable {
     
     static func reach(method: HTTPMethod,
                       queries: [String: Any] = [:],
