@@ -31,7 +31,9 @@ public protocol ApiReachable: SelfNameable {
     static var endPoint: String { get }
     static var requiredParams: [String: Any] { get }
     
-    static func reach(method: HTTPMethod, queries: [String: Any], completeHandler: @escaping (ApiResult<Self>) -> Void)
+    static func reach(method: HTTPMethod,
+                      queries: [String: Any],
+                      completeHandler: @escaping (ApiResult<Self>) -> Void)
 }
 
 
@@ -43,15 +45,18 @@ public extension ApiReachable {
     
     
     private static var mappingQueue: DispatchQueue {
-        return DispatchQueue(label: "mapping\(self.name)\(Int.random(in: 0..<1000))", qos: .userInitiated, attributes: [.concurrent])
+        return DispatchQueue(label: "mapping\(self.name)\(Int.random(in: 0..<1000000000))",
+            qos: .userInitiated, attributes: [.concurrent])
     }
 
 }
 
 
-public extension ApiReachable where Self: Mappable {
+public extension ApiReachable where Self: BaseMappable {
     
-    static func reach(method: HTTPMethod, queries: [String: Any] = [:], completeHandler: @escaping (ApiResult<Self>) -> Void) {
+    static func reach(method: HTTPMethod,
+                      queries: [String: Any] = [:],
+                      completeHandler: @escaping (ApiResult<Self>) -> Void) {
 
         if !isConnectedNet() {
             completeHandler(ApiResult.fail(error: ApiBaseError.noInternetConnection))
@@ -63,9 +68,9 @@ public extension ApiReachable where Self: Mappable {
             finalParams[$0.key] = $0.value
         }
 
-
         Alamofire.request(finalURL, method: method, parameters: finalParams)
-            .responseJSON(queue: mappingQueue, options: .allowFragments, completionHandler: { response in
+            .responseJSON(queue: mappingQueue,
+                          options: .allowFragments, completionHandler: { response in
 
                 switch response.result {
                 case .success(let json):
@@ -93,7 +98,9 @@ public extension ApiReachable where Self: Mappable {
 
 public extension ApiReachable where Self: Codable {
     
-    static func reach(method: HTTPMethod, queries: [String: Any] = [:], completeHandler: @escaping ((ApiResult<Self>) -> Void)) {
+    static func reach(method: HTTPMethod,
+                      queries: [String: Any] = [:],
+                      completeHandler: @escaping ((ApiResult<Self>) -> Void)) {
         
         if !isConnectedNet() {
             completeHandler(ApiResult.fail(error: ApiBaseError.noInternetConnection))
@@ -161,7 +168,9 @@ extension ApiReachable {
         }) else { return false }
         
         var flags = SCNetworkReachabilityFlags()
-        guard SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) else { return false }
+        guard SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) else {
+            return false
+        }
         
         return flags.contains(.reachable) && !flags.contains(.connectionRequired)
     }
