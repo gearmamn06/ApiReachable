@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B2274B6228D55BF009AC641 /* YoutubeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2274B5228D55BF009AC641 /* YoutubeData.swift */; };
+		2B2274E7228FB5FB009AC641 /* ResultPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2274E6228FB5FB009AC641 /* ResultPage.swift */; };
 		2BD1D45922466E2600D3F074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1D45822466E2600D3F074 /* AppDelegate.swift */; };
 		2BD1D45B22466E2600D3F074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1D45A22466E2600D3F074 /* ViewController.swift */; };
 		2BD1D45E22466E2600D3F074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD1D45C22466E2600D3F074 /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		2BD1D46622466E2700D3F074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD1D46422466E2700D3F074 /* LaunchScreen.storyboard */; };
 		2BD1D494224676B700D3F074 /* ApiReachable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD1D493224676B700D3F074 /* ApiReachable.framework */; };
 		2BD1D495224676B700D3F074 /* ApiReachable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD1D493224676B700D3F074 /* ApiReachable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CEF51B6D7FAF65C5E380B63 /* Pods_ApiReachable_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7203720AC707A7352D72DC60 /* Pods_ApiReachable_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +35,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B2274B5228D55BF009AC641 /* YoutubeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeData.swift; sourceTree = "<group>"; };
+		2B2274E6228FB5FB009AC641 /* ResultPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPage.swift; sourceTree = "<group>"; };
 		2BD1D45522466E2600D3F074 /* ApiReachable-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ApiReachable-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD1D45822466E2600D3F074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BD1D45A22466E2600D3F074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +46,9 @@
 		2BD1D46522466E2700D3F074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BD1D46722466E2700D3F074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BD1D493224676B700D3F074 /* ApiReachable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApiReachable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7203720AC707A7352D72DC60 /* Pods_ApiReachable_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiReachable_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1960F860A27B5D1E666248 /* Pods-ApiReachable-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiReachable-Demo.debug.xcconfig"; path = "Target Support Files/Pods-ApiReachable-Demo/Pods-ApiReachable-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		F7B7371D08FFB2F30D2DF2A6 /* Pods-ApiReachable-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiReachable-Demo.release.xcconfig"; path = "Target Support Files/Pods-ApiReachable-Demo/Pods-ApiReachable-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,18 +57,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BD1D494224676B700D3F074 /* ApiReachable.framework in Frameworks */,
+				4CEF51B6D7FAF65C5E380B63 /* Pods_ApiReachable_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B2274B4228D55B0009AC641 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2B2274B5228D55BF009AC641 /* YoutubeData.swift */,
+				2B2274E6228FB5FB009AC641 /* ResultPage.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		2BD1D44C22466E2600D3F074 = {
 			isa = PBXGroup;
 			children = (
 				2BD1D493224676B700D3F074 /* ApiReachable.framework */,
 				2BD1D45722466E2600D3F074 /* ApiReachable-Demo */,
 				2BD1D45622466E2600D3F074 /* Products */,
+				BFD1E86F30EA3A1D748AECD0 /* Pods */,
+				96890D70CDAB0AB37FBDBCC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +95,7 @@
 		2BD1D45722466E2600D3F074 /* ApiReachable-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				2B2274B4228D55B0009AC641 /* models */,
 				2BD1D45822466E2600D3F074 /* AppDelegate.swift */,
 				2BD1D45A22466E2600D3F074 /* ViewController.swift */,
 				2BD1D45C22466E2600D3F074 /* Main.storyboard */,
@@ -86,6 +107,24 @@
 			path = "ApiReachable-Demo";
 			sourceTree = "<group>";
 		};
+		96890D70CDAB0AB37FBDBCC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7203720AC707A7352D72DC60 /* Pods_ApiReachable_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFD1E86F30EA3A1D748AECD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC1960F860A27B5D1E666248 /* Pods-ApiReachable-Demo.debug.xcconfig */,
+				F7B7371D08FFB2F30D2DF2A6 /* Pods-ApiReachable-Demo.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -93,10 +132,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BD1D46A22466E2700D3F074 /* Build configuration list for PBXNativeTarget "ApiReachable-Demo" */;
 			buildPhases = (
+				6262A2663B8E743BAC92A892 /* [CP] Check Pods Manifest.lock */,
 				2BD1D45122466E2600D3F074 /* Sources */,
 				2BD1D45222466E2600D3F074 /* Frameworks */,
 				2BD1D45322466E2600D3F074 /* Resources */,
 				2BD1D496224676B700D3F074 /* Embed Frameworks */,
+				8D63BE1E3DB97BA603DA6073 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,6 +194,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6262A2663B8E743BAC92A892 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApiReachable-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D63BE1E3DB97BA603DA6073 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApiReachable-Demo/Pods-ApiReachable-Demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS11.0/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApiReachable-Demo/Pods-ApiReachable-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2BD1D45122466E2600D3F074 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -160,7 +248,9 @@
 			files = (
 				2BD1D46122466E2600D3F074 /* ApiReachable_Demo.xcdatamodeld in Sources */,
 				2BD1D45B22466E2600D3F074 /* ViewController.swift in Sources */,
+				2B2274E7228FB5FB009AC641 /* ResultPage.swift in Sources */,
 				2BD1D45922466E2600D3F074 /* AppDelegate.swift in Sources */,
+				2B2274B6228D55BF009AC641 /* YoutubeData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +394,7 @@
 		};
 		2BD1D46B22466E2700D3F074 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC1960F860A27B5D1E666248 /* Pods-ApiReachable-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -323,6 +414,7 @@
 		};
 		2BD1D46C22466E2700D3F074 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7B7371D08FFB2F30D2DF2A6 /* Pods-ApiReachable-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
