@@ -11,6 +11,22 @@ import ObjectMapper
 @testable import ApiReachable
 
 
+class ApiReachableTests: XCTestCase {
+    
+    override func setUp() {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+    
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+}
+
+
+
+// MARK: Common struct and protocol
+
+
 struct Genre: ImmutableMappable, Equatable {
     let id: Int
     let name: String
@@ -26,7 +42,7 @@ struct Genre: ImmutableMappable, Equatable {
     }
 }
 
-struct MappableItuenseSearchResultItem: ImmutableMappable, Equatable {
+struct ItuenseSearchResultItem: ImmutableMappable, Equatable {
     let type: String
     let name: String
     let linkUrl: URL
@@ -45,8 +61,8 @@ struct MappableItuenseSearchResultItem: ImmutableMappable, Equatable {
         primaryGenre = try Genre(map: map)
     }
     
-    static func == (lhs: MappableItuenseSearchResultItem,
-                    rhs: MappableItuenseSearchResultItem) -> Bool {
+    static func == (lhs: ItuenseSearchResultItem,
+                    rhs: ItuenseSearchResultItem) -> Bool {
         return lhs.id == rhs.id
             && lhs.type == rhs.type
             && lhs.name == rhs.name
@@ -69,7 +85,7 @@ extension Genre {
 }
 
 
-extension MappableItuenseSearchResultItem {
+extension ItuenseSearchResultItem {
     
     private init() {
         type = "Artist"
@@ -80,19 +96,40 @@ extension MappableItuenseSearchResultItem {
     }
     
     
-    fileprivate static var jackJohnson: MappableItuenseSearchResultItem {
-        return MappableItuenseSearchResultItem()
+    fileprivate static var jackJohnson: ItuenseSearchResultItem {
+        return ItuenseSearchResultItem()
     }
 }
 
-struct MappableItuenseSearchResult: ImmutableMappable, ApiReachable {
+
+
+protocol ItunesSearchReachable: ApiReachable {}
+
+extension ItunesSearchReachable {
     
-    static var baseURL: URL = URL(string: "https://itunes.apple.com")!
-    static var endPoint: String = "lookup"
-    static var requiredParams: [String : Any] = [:]
+    static var baseURL: URL {
+        return URL(string: "https://itunes.apple.com")!
+    }
+    
+    static var endPoint: String {
+        return "lookup"
+    }
+    
+    static var requiredParams: [String: Any] {
+        return [:]
+    }
+    
+}
+
+
+
+// MARK: test mappable
+
+
+struct MappableItuenseSearchResult: ImmutableMappable, ItunesSearchReachable {
     
     let resultCount: Int
-    let results: [MappableItuenseSearchResultItem]
+    let results: [ItuenseSearchResultItem]
     
     init(map: Map) throws {
         resultCount = try map.value("resultCount")
@@ -101,16 +138,8 @@ struct MappableItuenseSearchResult: ImmutableMappable, ApiReachable {
 }
 
 
-class ApiReachableTests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+extension ApiReachableTests {
+    
     func testMapping() {
         let testBundle = Bundle(for: type(of: self))
         let path = testBundle.path(forResource: "Jack_Johnson_search_result", ofType: "json")
@@ -124,7 +153,7 @@ class ApiReachableTests: XCTestCase {
         XCTAssertEqual(mappingResult?.resultCount, 1)
         
         let first = mappingResult?.results.first
-        let jackJson = MappableItuenseSearchResultItem.jackJohnson
+        let jackJson = ItuenseSearchResultItem.jackJohnson
         XCTAssertNotNil(first)
         XCTAssertEqual(first, jackJson)
     }
@@ -157,4 +186,100 @@ class ApiReachableTests: XCTestCase {
         XCTAssertNotNil(responseModel)
     }
 
+    
+}
+
+
+// MARK: test Decodable
+
+extension Genre: Decodable {
+    
+    init(from decoder: Decoder) throws {
+        
+        let container = try decoder.container(keyedBy: ItuenseSearchResultItem.ItemCodingKey.self)
+        
+        id = try container.decode(Int.self, forKey: .genreId)
+        name = try container.decode(String.self, forKey: .genreName)
+    }
+}
+
+
+extension ItuenseSearchResultItem: Decodable {
+    
+    enum ItemCodingKey: String, CodingKey {
+        case type = "artistType"
+        case name = "artistName"
+        case linkUrl = "artistLinkUrl"
+        case id = "artistId"
+        case genreName = "primaryGenreName"
+        case genreId = "primaryGenreId"
+    }
+    
+    init(from decoder: Decoder) throws {
+        
+        let container = try decoder.container(keyedBy: ItemCodingKey.self)
+        
+        type = try container.decode(String.self, forKey: .type)
+        name = try container.decode(String.self, forKey: .name)
+        linkUrl = try container.decode(URL.self, forKey: .linkUrl)
+        id = try container.decode(Int.self, forKey: .id)
+        
+        primaryGenre = try Genre(from: decoder)
+    }
+}
+
+
+struct DecodableItuenseSearResult: Decodable, ItunesSearchReachable {
+    
+    let resultCount: Int
+    let results: [ItuenseSearchResultItem]
+}
+
+extension ApiReachableTests {
+    
+    func testDecodableMapping() {
+        
+        let testBundle = Bundle(for: type(of: self))
+        let path = testBundle.path(forResource: "Jack_Johnson_search_result", ofType: "json")
+        let fileUrl = URL(fileURLWithPath: path!)
+        
+        let data = try! Data(contentsOf: fileUrl, options: .alwaysMapped)
+        let mappingResult = try? JSONDecoder().decode(DecodableItuenseSearResult.self, from: data)
+        
+        XCTAssertNotNil(mappingResult)
+        XCTAssertEqual(mappingResult?.results.count, mappingResult?.resultCount)
+        XCTAssertEqual(mappingResult?.resultCount, 1)
+        
+        let first = mappingResult?.results.first
+        let jackJson = ItuenseSearchResultItem.jackJohnson
+        XCTAssertNotNil(first)
+        XCTAssertEqual(first, jackJson)
+    }
+    
+    
+    func testDecodableReach() {
+        let promise = expectation(description: "reach end handle invoke")
+        
+        let queries: [String: Any] = ["id": 909253]
+        var responseModel: DecodableItuenseSearResult?
+        var responseError: Error?
+        
+        // when
+        DecodableItuenseSearResult.reach(method: .get, queries: queries, completeHandler: { result in
+            switch result {
+            case .success(let model):
+                responseModel = model
+                
+            case .fail(let error):
+                responseError = error
+            }
+            promise.fulfill()
+        })
+        
+        waitForExpectations(timeout: 5, handler: nil)
+        
+        // then
+        XCTAssertNil(responseError)
+        XCTAssertNotNil(responseModel)
+    }
 }
