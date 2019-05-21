@@ -26,7 +26,7 @@ public enum ApiResult<T> {
 }
 
 
-public protocol ApiReachable: SelfNameable {
+public protocol ApiReachable {
     static var baseURL: URL { get }
     static var endPoint: String { get }
     static var requiredParams: [String: Any] { get }
@@ -45,7 +45,7 @@ public extension ApiReachable {
     
     
     private static var mappingQueue: DispatchQueue {
-        return DispatchQueue(label: "mapping\(self.name)\(Int.random(in: 0..<1000000000))",
+        return DispatchQueue(label: "mapping\(Int.random(in: 0..<1000000000))",
             qos: .userInitiated, attributes: [.concurrent])
     }
 
@@ -75,7 +75,7 @@ public extension ApiReachable where Self: BaseMappable {
                 switch response.result {
                 case .success(let json):
                     print(json)
-                    if let sender = try? Mapper<Self>().map(JSONObject: json) {
+                    if let sender = Mapper<Self>().map(JSONObject: json) {
                         DispatchQueue.main.async {
                             completeHandler(ApiResult.success(model: sender))
                         }

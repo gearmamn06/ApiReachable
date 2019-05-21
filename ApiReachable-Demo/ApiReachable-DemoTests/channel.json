@@ -1,0 +1,32 @@
+{
+"kind": "youtube#channel",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/k8Whbn2SggbMGiXzvib-zoBTR4I\"",
+"id": "UCBR8-60-B28hp2BmDPdntcQ",
+"snippet": {
+"title": "YouTube",
+"description": "Welcome to YouTube's Spotlight channel, your daily go-to for discovering what's new and trending around the world. From music to culture to Internet phenomena, find those gotta-watch videos from across YouTube, all in one place.",
+"customUrl": "YouTube",
+"thumbnails": {
+"default": {
+"url": "https://yt3.ggpht.com/a/AGF-l79Dpy9yGG-j3hTwtQiN3iXRVaC0UHu2cgSUvQ=s88-mo-c-c0xffffffff-rj-k-no",
+"width": 88,
+"height": 88
+},
+"medium": {
+"url": "https://yt3.ggpht.com/a/AGF-l79Dpy9yGG-j3hTwtQiN3iXRVaC0UHu2cgSUvQ=s240-mo-c-c0xffffffff-rj-k-no",
+"width": 240,
+"height": 240
+},
+"high": {
+"url": "https://yt3.ggpht.com/a/AGF-l79Dpy9yGG-j3hTwtQiN3iXRVaC0UHu2cgSUvQ=s800-mo-c-c0xffffffff-rj-k-no",
+"width": 800,
+"height": 800
+}
+},
+"localized": {
+"title": "YouTube",
+"description": "Welcome to YouTube's Spotlight channel, your daily go-to for discovering what's new and trending around the world. From music to culture to Internet phenomena, find those gotta-watch videos from across YouTube, all in one place."
+},
+"country": "US"
+}
+}
