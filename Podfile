@@ -25,6 +25,17 @@ end
 
 
 target 'ApiReachable-Demo' do
-  pod 'ObjectMapper', '~> 3.4'
+  
+  shared
+  pod 'RxCocoa',    '~> 5.0'
+  
+  project 'ApiReachable-Demo/ApiReachable-Demo'
+end
+
+
+target 'ApiReachable-DemoTests' do
+  
+  shared
+  
   project 'ApiReachable-Demo/ApiReachable-Demo'
 end

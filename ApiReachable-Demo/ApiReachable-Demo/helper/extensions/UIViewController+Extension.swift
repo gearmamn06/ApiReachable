@@ -6,4 +6,8 @@
 //  Copyright © 2019 ParkHyunsoo. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIViewController: SelfNamable {}
+
+

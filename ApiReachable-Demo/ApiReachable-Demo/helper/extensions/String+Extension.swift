@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+
+extension String {
+    
+    var snippet: String {
+        return "snippet.\(self)"
+    }
+}
