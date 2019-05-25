@@ -9,20 +9,11 @@
 import UIKit
 
 
-struct CategoryCellViewModel {
-    let title: String
-}
-
-
-class CategoryCell: UITableViewCell, ConfigurableCell {
-    
-    typealias ViewModel = CategoryCellViewModel
+class CategoryCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
-    
-    func setUpSubViews(_ viewModel: CategoryCellViewModel) {
-        nameLabel.text = viewModel.title
+    override func awakeFromNib() {
+        self.selectionStyle = .none
     }
-    
 }

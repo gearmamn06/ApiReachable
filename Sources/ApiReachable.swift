@@ -74,7 +74,6 @@ public extension ApiReachable where Self: BaseMappable {
 
                 switch response.result {
                 case .success(let json):
-                    print(json)
                     if let sender = Mapper<Self>().map(JSONObject: json) {
                         DispatchQueue.main.async {
                             completeHandler(ApiResult.success(model: sender))
@@ -116,7 +115,6 @@ public extension ApiReachable where Self: Decodable {
             .responseData(completionHandler: { response in
                 switch response.result {
                 case .success(let value):
-                    print(value)
                     if let sender = try? JSONDecoder().decode(self, from: value) {
                         DispatchQueue.main.async {
                             completeHandler(ApiResult.success(model: sender))
@@ -134,24 +132,23 @@ public extension ApiReachable where Self: Decodable {
 }
 
 
-extension ApiReachable {
+public extension ApiReachable {
     
-    static func reach(method: HTTPMethod, queries: [String: Any] = [:]) -> Observable<Self> {
+    static func reach(method: HTTPMethod, queries: [String: Any] = [:]) -> Single<Self> {
         return Observable.create { observer in
             self.reach(method: method, queries: queries, completeHandler: { result in
                 
                 switch result {
                 case let .success(model):
                     observer.onNext(model)
+                    observer.onCompleted()
                     
                 case let .fail(error):
                     observer.onError(error)
                 }
-                
-                observer.onCompleted()
             })
             return Disposables.create()
-        }
+        }.asSingle()
     }
 }
 

@@ -7,107 +7,84 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
-
-struct CategoryViewModel {
-    
-    let reload = PublishSubject<Void>()
-    var cellViewModels: [CategoryCellViewModel] = [] {
-        didSet {
-            reload.onNext(())
-        }
-    }
-    
-    private let currentErrorMessage = PublishSubject<String>()
-    let errorAlertShowing = BehaviorSubject<Bool>(value: false)
-    func refresh() {
-        PageResult<GuideCategory>.reach(method: .get) { result in
-            switch result {
-            case .success(let page):
-                self.cellViewModels = page.items
-                
-            case .fail(let error):
-                self.currentErrorMessage.onNext(error.localizedDescription)
-            }
-        }
-    }
-    
-    
-    var errorMessage: Observable<String> {
-        return Observable.combineLatest(errorAlertShowing, currentErrorMessage) { showing, errMess in
-            if showing {
-                return ""
-            }
-            return errMess
-        }
-    }
-}
 
 
 class CategoryListViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    private var categoris = [GuideCategory]()
     
-    private var viewModel = CategoryViewModel()
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        setUpSubViews()
+        setUpNavigationBar()
+        setUpTableView()
+        
+        refresh()
     }
 }
 
 extension CategoryListViewController {
-    
-    private func setUpSubViews() {
-        self.setUpNavigationBar()
-        self.setUpTableView()
-    }
+
     
     private func setUpNavigationBar() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh,
+        self.title = "Category"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh,
                                                                  target: self,
                                                                  action: #selector(refreshButtonDidTap))
     }
     
     @objc private func refreshButtonDidTap() {
-        viewModel.refresh()
+        refresh()
+    }
+    
+    
+    private func refresh() {
+
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
+        PageResult<GuideCategory>.reach(method: .get, completeHandler: { result in
+            switch result {
+            case .success(let page):
+                self.categoris = page.items
+                self.tableView.reloadData()
+                
+            case .fail(let error):
+                self.showErrorAlert(message: error.localizedDescription)
+            }
+            
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+        })
     }
 }
 
 
-extension CategoryListViewController: UITableViewDataSource, UITableViewDelegate {
+extension CategoryListViewController: UITableViewDataSource, UITableViewDelegate  {
+    
     
     private func setUpTableView() {
-        self.tableView.estimatedRowHeight = UITableView.automaticDimension
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
-     
-        let _ = viewModel.reload
-            .observeOn(MainScheduler.instance)
-            .takeUntil(self.rx.deallocated)
-            .subscribe { [weak self] event in
-                self?.tableView.reloadData()
-        }
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.cellViewModels.count
+        return categoris.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CategoryCell.name) as! CategoryCell
-        cell.setUpSubViews(viewModel.cellViewModels[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
+        cell.nameLabel.text = categoris[indexPath.row].title
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        cell?.selectionStyle = .none
+        let category = categoris[indexPath.row]
+        let dest = ChannleViewController.instance
+        dest.category = category
         
-        // TODO: to channel view controller
+        self.navigationController?.pushViewController(dest, animated: true)
     }
+    
 }
