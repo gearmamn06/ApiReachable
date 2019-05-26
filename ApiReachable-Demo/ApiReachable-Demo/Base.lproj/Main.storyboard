@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="80N-5A-utb" customClass="CategoryCell" customModule="ApiReachable_Demo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="80N-5A-utb" customClass="CategoryCell" customModule="ApiReachable_Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="80N-5A-utb" id="KHg-Tz-oOd">
@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="1128" y="137"/>
         </scene>
-        <!--Channle View Controller-->
+        <!--Channel View Controller-->
         <scene sceneID="Me2-vQ-5q2">
             <objects>
-                <viewController restorationIdentifier="ChannleViewController" storyboardIdentifier="ChannleViewController" id="F2w-kt-rIC" customClass="ChannleViewController" customModule="ApiReachable_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ChannelViewController" storyboardIdentifier="ChannelViewController" id="F2w-kt-rIC" customClass="ChannelViewController" customModule="ApiReachable_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fun-Zz-Pfg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,11 +84,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChannelCell" rowHeight="81" id="YkP-yV-fIK" customClass="ChannelCell" customModule="ApiReachable_Demo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="81"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChannelCell" rowHeight="71" id="YkP-yV-fIK" customClass="ChannelCell" customModule="ApiReachable_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YkP-yV-fIK" id="2jc-Tq-dZ9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HSJ-WF-O8J">
@@ -116,6 +116,7 @@
                                                 <constraint firstItem="HSJ-WF-O8J" firstAttribute="width" secondItem="2jc-Tq-dZ9" secondAttribute="width" multiplier="0.1" id="PXb-Jw-Mp4"/>
                                                 <constraint firstItem="x5e-UC-7Up" firstAttribute="leading" secondItem="HSJ-WF-O8J" secondAttribute="trailing" constant="16" id="S6A-bg-3D8"/>
                                                 <constraint firstAttribute="trailing" secondItem="x5e-UC-7Up" secondAttribute="trailing" constant="16" id="XkN-R0-TBM"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="x5e-UC-7Up" secondAttribute="bottom" constant="38" id="bRe-Fd-0JX"/>
                                                 <constraint firstItem="R2t-ew-Ns2" firstAttribute="top" secondItem="x5e-UC-7Up" secondAttribute="bottom" constant="4" id="bt7-z2-BmE"/>
                                                 <constraint firstItem="HSJ-WF-O8J" firstAttribute="leading" secondItem="2jc-Tq-dZ9" secondAttribute="leading" constant="24" id="q0g-81-MvA"/>
                                                 <constraint firstItem="R2t-ew-Ns2" firstAttribute="leading" secondItem="x5e-UC-7Up" secondAttribute="leading" id="vIs-JB-AZr"/>
@@ -151,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="REt-mh-bH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="803"/>
+            <point key="canvasLocation" x="886.95652173913049" y="802.90178571428567"/>
         </scene>
         <!--Video Search View Controller-->
         <scene sceneID="uzP-dm-MPd">
@@ -165,7 +166,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoSearchCell" rowHeight="341" id="Zo3-qq-zoh" customClass="VideoSearchCell" customModule="ApiReachable_Demo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoSearchCell" rowHeight="341" id="Zo3-qq-zoh" customClass="VideoSearchCell" customModule="ApiReachable_Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="341"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zo3-qq-zoh" id="FVD-I9-6se">

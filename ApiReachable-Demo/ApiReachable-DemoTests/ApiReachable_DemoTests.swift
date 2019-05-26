@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import RxSwift
+import RxCocoa
 
 @testable import ApiReachable
 @testable import ApiReachable_Demo
@@ -61,7 +63,7 @@ extension ApiReachable_DemoTests {
     func testMappingModels() {
         
         let category = try? GuideCategory(JSONString: categoryJsonString)
-        let channel = try? Channel(JSONString: channelJsonString)
+        let channel = try? ChannelSearch(JSONString: channelJsonString)
         let video = try? VideoSearch(JSONString: videoJsonString)
         
         XCTAssertNotNil(category)
@@ -73,7 +75,7 @@ extension ApiReachable_DemoTests {
     func testMappingModelList() {
         
         let catergoies = try? PageResult<GuideCategory>(JSONString: categoryListJsonString)
-        let channels = try? PageResult<Channel>(JSONString: channelListJsonString)
+        let channels = try? PageResult<ChannelSearch>(JSONString: channelListJsonString)
         let videos = try? PageResult<VideoSearch>(JSONString: videoListJsonString)
         
         XCTAssertNotNil(catergoies?.items)
@@ -118,15 +120,15 @@ extension ApiReachable_DemoTests {
     }
     
     func testReachChannel() {
-        var responseModel: PageResult<Channel>!
+        var responseModel: PageResult<ChannelSearch>!
         var responseError: Error!
         
         let promise = expectation(description: "reach end handle invoke")
         
         let qry: [String: Any] = [
-            "id": "UCBR8-60-B28hp2BmDPdntcQ"
+        "categoryId": "GCQ3JlYXRvciBvbiB0aGUgUmlzZQ"
         ]
-        PageResult<Channel>.reach(method: .get, queries: qry) { result in
+        PageResult<ChannelSearch>.reach(method: .get, queries: qry) { result in
             switch result {
             case .success(let model):
                 responseModel = model
@@ -164,6 +166,35 @@ extension ApiReachable_DemoTests {
             
             promise.fulfill()
         }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+        
+        XCTAssertNotNil(responseModel)
+        XCTAssertNil(responseError)
+    }
+    
+    
+    func testFetchAsASingle() {
+        
+        var responseModel: PageResult<VideoSearch>!
+        var responseError: Error!
+        
+        let promise = expectation(description: "reach end hanle invoke")
+        
+        let qry: [String: Any] = [
+            "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+        ]
+        
+        PageResult<VideoSearch>.reach(method: .get, queries: qry)
+            .debug()
+            .asSingle()
+            .subscribe(onSuccess: { result in
+                responseModel = result
+                promise.fulfill()
+            }, onError: { error in
+                responseError = error
+                promise.fulfill()
+            })
         
         waitForExpectations(timeout: 5, handler: nil)
         

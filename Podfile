@@ -28,6 +28,7 @@ target 'ApiReachable-Demo' do
   
   shared
   pod 'RxCocoa',    '~> 5.0'
+  pod 'Kingfisher', '~> 5.0'
   
   project 'ApiReachable-Demo/ApiReachable-Demo'
 end
@@ -36,6 +37,7 @@ end
 target 'ApiReachable-DemoTests' do
   
   shared
+  pod 'RxCocoa',    '~> 5.0'
   
   project 'ApiReachable-Demo/ApiReachable-Demo'
 end

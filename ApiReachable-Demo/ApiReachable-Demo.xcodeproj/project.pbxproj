@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0A2A3D12FC5D8DE8C1E86489 /* Pods_ApiReachable_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FBDCBD84D8F65C713FA52B /* Pods_ApiReachable_DemoTests.framework */; };
+		2B186DB7229A8CD30064F8CC /* ChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B186DB6229A8CD30064F8CC /* ChannelViewModel.swift */; };
 		2B2274B6228D55BF009AC641 /* YoutubeApiReachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2274B5228D55BF009AC641 /* YoutubeApiReachable.swift */; };
 		2B2274E7228FB5FB009AC641 /* PageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2274E6228FB5FB009AC641 /* PageResult.swift */; };
-		2B2274F3228FDCCB009AC641 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2274F2228FDCCB009AC641 /* Channel.swift */; };
+		2B2274F3228FDCCB009AC641 /* ChannelSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2274F2228FDCCB009AC641 /* ChannelSearch.swift */; };
 		2B2274F5228FDD17009AC641 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2274F4228FDD17009AC641 /* Thumbnail.swift */; };
 		2B2274FA228FE654009AC641 /* GuideCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2274F9228FE654009AC641 /* GuideCategory.swift */; };
 		2B227502228FE6E9009AC641 /* ApiReachable_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B227501228FE6E9009AC641 /* ApiReachable_DemoTests.swift */; };
@@ -31,7 +32,7 @@
 		2B2481B822944BAF006EEAC6 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2481B722944BAF006EEAC6 /* ChannelCell.swift */; };
 		2B2481BA22944BBB006EEAC6 /* VideoSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2481B922944BBB006EEAC6 /* VideoSearchCell.swift */; };
 		2BC9B7F822946F3A00D37102 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC9B7F722946F3A00D37102 /* CategoryListViewController.swift */; };
-		2BC9B7FA22946F4400D37102 /* ChannleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC9B7F922946F4400D37102 /* ChannleViewController.swift */; };
+		2BC9B7FA22946F4400D37102 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC9B7F922946F4400D37102 /* ChannelViewController.swift */; };
 		2BC9B7FC22946F4D00D37102 /* VideoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC9B7FB22946F4D00D37102 /* VideoSearchViewController.swift */; };
 		2BD1D45922466E2600D3F074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1D45822466E2600D3F074 /* AppDelegate.swift */; };
 		2BD1D45E22466E2600D3F074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD1D45C22466E2600D3F074 /* Main.storyboard */; };
@@ -69,9 +70,10 @@
 
 /* Begin PBXFileReference section */
 		19FBDCBD84D8F65C713FA52B /* Pods_ApiReachable_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiReachable_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B186DB6229A8CD30064F8CC /* ChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewModel.swift; sourceTree = "<group>"; };
 		2B2274B5228D55BF009AC641 /* YoutubeApiReachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeApiReachable.swift; sourceTree = "<group>"; };
 		2B2274E6228FB5FB009AC641 /* PageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageResult.swift; sourceTree = "<group>"; };
-		2B2274F2228FDCCB009AC641 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		2B2274F2228FDCCB009AC641 /* ChannelSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelSearch.swift; sourceTree = "<group>"; };
 		2B2274F4228FDD17009AC641 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
 		2B2274F9228FE654009AC641 /* GuideCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCategory.swift; sourceTree = "<group>"; };
 		2B2274FF228FE6E9009AC641 /* ApiReachable-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ApiReachable-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +96,7 @@
 		2B2481B722944BAF006EEAC6 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		2B2481B922944BBB006EEAC6 /* VideoSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSearchCell.swift; sourceTree = "<group>"; };
 		2BC9B7F722946F3A00D37102 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
-		2BC9B7F922946F4400D37102 /* ChannleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannleViewController.swift; sourceTree = "<group>"; };
+		2BC9B7F922946F4400D37102 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		2BC9B7FB22946F4D00D37102 /* VideoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSearchViewController.swift; sourceTree = "<group>"; };
 		2BD1D45522466E2600D3F074 /* ApiReachable-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ApiReachable-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD1D45822466E2600D3F074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,13 +134,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B186DB3229A8C4C0064F8CC /* category */ = {
+			isa = PBXGroup;
+			children = (
+				2B2481B522944BA3006EEAC6 /* CategoryCell.swift */,
+				2BC9B7F722946F3A00D37102 /* CategoryListViewController.swift */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		2B186DB4229A8C6D0064F8CC /* channel */ = {
+			isa = PBXGroup;
+			children = (
+				2B2481B722944BAF006EEAC6 /* ChannelCell.swift */,
+				2B186DB6229A8CD30064F8CC /* ChannelViewModel.swift */,
+				2BC9B7F922946F4400D37102 /* ChannelViewController.swift */,
+			);
+			path = channel;
+			sourceTree = "<group>";
+		};
+		2B186DB5229A8C730064F8CC /* video */ = {
+			isa = PBXGroup;
+			children = (
+				2B2481B922944BBB006EEAC6 /* VideoSearchCell.swift */,
+				2BC9B7FB22946F4D00D37102 /* VideoSearchViewController.swift */,
+			);
+			path = video;
+			sourceTree = "<group>";
+		};
 		2B2274B4228D55B0009AC641 /* models */ = {
 			isa = PBXGroup;
 			children = (
 				2B2274E6228FB5FB009AC641 /* PageResult.swift */,
 				2B2274F9228FE654009AC641 /* GuideCategory.swift */,
 				2B2274F4228FDD17009AC641 /* Thumbnail.swift */,
-				2B2274F2228FDCCB009AC641 /* Channel.swift */,
+				2B2274F2228FDCCB009AC641 /* ChannelSearch.swift */,
 				2B22750F228FED71009AC641 /* VideoSearch.swift */,
 			);
 			path = models;
@@ -198,31 +228,12 @@
 		2B2481B122944978006EEAC6 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				2B2481B222944B17006EEAC6 /* cells */,
-				2B2481C622945562006EEAC6 /* controllers */,
+				2B2481B322944B2A006EEAC6 /* ConfigurableCell.swift */,
+				2B186DB3229A8C4C0064F8CC /* category */,
+				2B186DB4229A8C6D0064F8CC /* channel */,
+				2B186DB5229A8C730064F8CC /* video */,
 			);
 			path = views;
-			sourceTree = "<group>";
-		};
-		2B2481B222944B17006EEAC6 /* cells */ = {
-			isa = PBXGroup;
-			children = (
-				2B2481B322944B2A006EEAC6 /* ConfigurableCell.swift */,
-				2B2481B522944BA3006EEAC6 /* CategoryCell.swift */,
-				2B2481B722944BAF006EEAC6 /* ChannelCell.swift */,
-				2B2481B922944BBB006EEAC6 /* VideoSearchCell.swift */,
-			);
-			path = cells;
-			sourceTree = "<group>";
-		};
-		2B2481C622945562006EEAC6 /* controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2BC9B7F722946F3A00D37102 /* CategoryListViewController.swift */,
-				2BC9B7F922946F4400D37102 /* ChannleViewController.swift */,
-				2BC9B7FB22946F4D00D37102 /* VideoSearchViewController.swift */,
-			);
-			path = controllers;
 			sourceTree = "<group>";
 		};
 		2BD1D44C22466E2600D3F074 = {
@@ -426,6 +437,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS12.2/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS12.2/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS12.2/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS12.2/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay-iOS12.2/RxRelay.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -434,6 +447,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -452,8 +467,9 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS11.0/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS11.0/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS11.0/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS11.0/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay-iOS11.0/RxRelay.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -462,6 +478,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 			);
@@ -516,12 +533,13 @@
 				2B2481AB22944777006EEAC6 /* UIViewController+Extension.swift in Sources */,
 				2BD1D46122466E2600D3F074 /* ApiReachable_Demo.xcdatamodeld in Sources */,
 				2B22750C228FE77B009AC641 /* String+Extension.swift in Sources */,
-				2BC9B7FA22946F4400D37102 /* ChannleViewController.swift in Sources */,
-				2B2274F3228FDCCB009AC641 /* Channel.swift in Sources */,
+				2BC9B7FA22946F4400D37102 /* ChannelViewController.swift in Sources */,
+				2B2274F3228FDCCB009AC641 /* ChannelSearch.swift in Sources */,
 				2B2481B422944B2A006EEAC6 /* ConfigurableCell.swift in Sources */,
 				2B2274E7228FB5FB009AC641 /* PageResult.swift in Sources */,
 				2BD1D45922466E2600D3F074 /* AppDelegate.swift in Sources */,
 				2B2274B6228D55BF009AC641 /* YoutubeApiReachable.swift in Sources */,
+				2B186DB7229A8CD30064F8CC /* ChannelViewModel.swift in Sources */,
 				2B2481AD229447AA006EEAC6 /* SelfNamable.swift in Sources */,
 				2B2274F5228FDD17009AC641 /* Thumbnail.swift in Sources */,
 				2B227510228FED71009AC641 /* VideoSearch.swift in Sources */,

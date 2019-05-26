@@ -12,10 +12,13 @@ class VideoSearchViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var channelID: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setUpTableView()
     }
     
 
@@ -29,4 +32,23 @@ class VideoSearchViewController: UIViewController {
     }
     */
 
+}
+
+
+// MARK: setUp tableView
+
+extension VideoSearchViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    private func setUpTableView() {
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }

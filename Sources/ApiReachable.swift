@@ -134,7 +134,7 @@ public extension ApiReachable where Self: Decodable {
 
 public extension ApiReachable {
     
-    static func reach(method: HTTPMethod, queries: [String: Any] = [:]) -> Single<Self> {
+    static func reach(method: HTTPMethod, queries: [String: Any] = [:]) -> Observable<Self> {
         return Observable.create { observer in
             self.reach(method: method, queries: queries, completeHandler: { result in
                 
@@ -148,7 +148,7 @@ public extension ApiReachable {
                 }
             })
             return Disposables.create()
-        }.asSingle()
+        }
     }
 }
 

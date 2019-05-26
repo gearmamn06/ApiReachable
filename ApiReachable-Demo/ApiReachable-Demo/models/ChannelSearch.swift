@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct Channel: ImmutableMappable {
+struct ChannelSearch: ImmutableMappable {
     
     let id: String
     let title: String
@@ -19,7 +19,7 @@ struct Channel: ImmutableMappable {
     
     init(map: Map) throws {
         
-        id = try map.value("id")
+        id = try map.value("id.channelId")
         title = try map.value("title".snippet)
         description = try map.value("description".snippet)
         thumbnail = try map.value("thumbnails".snippet)
@@ -27,14 +27,16 @@ struct Channel: ImmutableMappable {
 }
 
 
-extension Channel: YoutubeApiReachable {
+extension ChannelSearch: YoutubeApiReachable {
     static var endPoint: YoutubeDataEndpoints {
-        return .channels
+        return .search
     }
     static var defaultParameters: [String : Any] {
         return [
             "part": "id, snippet",
-            "maxResults": 20
+            "type": "channel",
+            "order": "rating",
+            "maxResults": 30
         ]
     }
 }

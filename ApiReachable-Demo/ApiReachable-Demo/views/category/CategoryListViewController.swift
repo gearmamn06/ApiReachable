@@ -76,12 +76,13 @@ extension CategoryListViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell
         cell.nameLabel.text = categoris[indexPath.row].title
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = categoris[indexPath.row]
-        let dest = ChannleViewController.instance
+        let dest = ChannelViewController.instance
         dest.category = category
         
         self.navigationController?.pushViewController(dest, animated: true)
