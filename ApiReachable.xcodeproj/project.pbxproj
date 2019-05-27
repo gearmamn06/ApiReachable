@@ -11,7 +11,6 @@
 		2B2274DE228D58F1009AC641 /* ApiReachable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD1D44122466E0700D3F074 /* ApiReachable.framework */; };
 		2B2274EF228FC23B009AC641 /* Jack_Johnson_search_result.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B2274EE228FC23B009AC641 /* Jack_Johnson_search_result.json */; };
 		2BD1D44622466E0700D3F074 /* ApiReachable.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BD1D44422466E0700D3F074 /* ApiReachable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2BD1D46F22466E5800D3F074 /* SelfNameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1D46E22466E5800D3F074 /* SelfNameable.swift */; };
 		2BD1D4922246734F00D3F074 /* ApiReachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1D4912246734F00D3F074 /* ApiReachable.swift */; };
 		545484AE18DDF942E3D01A00 /* Pods_ApiReachable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F547DAC9B78E8910DFAD70 /* Pods_ApiReachable.framework */; };
 		93C53E7F78A265E218B79E7B /* Pods_ApiReachableTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83988FDDE40BEF9FE96B0E08 /* Pods_ApiReachableTests.framework */; };
@@ -37,7 +36,6 @@
 		2BD1D44122466E0700D3F074 /* ApiReachable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApiReachable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD1D44422466E0700D3F074 /* ApiReachable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiReachable.h; sourceTree = "<group>"; };
 		2BD1D44522466E0700D3F074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BD1D46E22466E5800D3F074 /* SelfNameable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfNameable.swift; sourceTree = "<group>"; };
 		2BD1D4912246734F00D3F074 /* ApiReachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiReachable.swift; sourceTree = "<group>"; };
 		3074C12D7A53F2D9235FA189 /* Pods-ApiReachable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiReachable.release.xcconfig"; path = "Target Support Files/Pods-ApiReachable/Pods-ApiReachable.release.xcconfig"; sourceTree = "<group>"; };
 		73F547DAC9B78E8910DFAD70 /* Pods_ApiReachable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiReachable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +100,6 @@
 				2BD1D44422466E0700D3F074 /* ApiReachable.h */,
 				2BD1D44522466E0700D3F074 /* Info.plist */,
 				2BD1D4912246734F00D3F074 /* ApiReachable.swift */,
-				2BD1D46E22466E5800D3F074 /* SelfNameable.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -322,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BD1D4922246734F00D3F074 /* ApiReachable.swift in Sources */,
-				2BD1D46F22466E5800D3F074 /* SelfNameable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
