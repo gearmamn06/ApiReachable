@@ -1,0 +1,673 @@
+{
+"kind": "youtube#searchListResponse",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/0ar8YiZGvEP1jVmrUc48j8-mgTM\"",
+"nextPageToken": "CBQQAA",
+"regionCode": "KR",
+"pageInfo": {
+"totalResults": 312,
+"resultsPerPage": 20
+},
+"items": [
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/8-DuZgnUQtIPD1ZFeMT1q4jbVok\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "HkZD4lgKPX8"
+},
+"snippet": {
+"publishedAt": "2019-05-09T18:55:02.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "Assumptions About Me | YouTube Creator Summit Edition",
+"description": "Think you know everything about your favorite YouTube creators? We asked for your assumptions, now watch and find out if they're true. #CreatorSummit For ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/HkZD4lgKPX8/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/HkZD4lgKPX8/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/HkZD4lgKPX8/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/l2qmiPimDgpxk4kGYl-qngb_o0k\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "RkYQQK-w2Lg"
+},
+"snippet": {
+"publishedAt": "2019-05-06T22:52:56.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "YouTube Stories | Charles Lomu: Barbering for Change",
+"description": "Charles Lomu is making a difference one fresh cut at a time with his 'Groom Room' at Granville Boys High School. He's blending youth work and barbering to ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/RkYQQK-w2Lg/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/RkYQQK-w2Lg/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/RkYQQK-w2Lg/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/tZpbxM1Bou6Qefx25OF79xlZJQg\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "ze_f9ljGess"
+},
+"snippet": {
+"publishedAt": "2019-05-06T22:52:49.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "YouTube Stories | Eddie Woo: Sharing the Wonder of Mathematics",
+"description": "Kids often think maths is too hard, or just not fun. Eddie Woo is changing that. A teacher in Sydney, he shares his passion with the community, country and world ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/ze_f9ljGess/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/ze_f9ljGess/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/ze_f9ljGess/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/7BXOqPBeesoemp6suduhtK-8hTM\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "0T51c1kprZg"
+},
+"snippet": {
+"publishedAt": "2019-05-06T22:52:44.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "YouTube Stories | Macinley Butson: Inventing Armour to Battle Radiation",
+"description": "Macinley Butson was just sixteen when she decided to do something to protect women from excess radiation during breast cancer treatment. She turned to ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/0T51c1kprZg/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/0T51c1kprZg/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/0T51c1kprZg/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/Jdk1SzPx7gDzZfLA_HPcU8iPlK4\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "EkPCzwZ_x58"
+},
+"snippet": {
+"publishedAt": "2019-04-22T15:11:52.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "YouTube Stories | Krystn Keller: Healing through How-Tos",
+"description": "Krystn delved into the world of natural soap making on YouTube in her search for a way to clear her son's eczema. She did just that and now runs her own ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/EkPCzwZ_x58/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/EkPCzwZ_x58/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/EkPCzwZ_x58/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/m13cX3tQNTFo-CllWFCucQ24TRY\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "elllLRukQak"
+},
+"snippet": {
+"publishedAt": "2018-12-31T16:59:49.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "YouTube&#39;s Toast to 2019 — Q&amp;A with Zane, Tati, Poppy and Mr. Kate &amp; Joey",
+"description": "Ring in the new year with Zane Hijazi, Tati Westbrook, Poppy and Mr. Kate & Joey Zehr! This video was filmed at the YouTube Space in Los Angeles.",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/elllLRukQak/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/elllLRukQak/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/elllLRukQak/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/ytDp-BJ48VxOrdmJo2KXF4JKAyI\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "8qTQbk2A02M"
+},
+"snippet": {
+"publishedAt": "2018-12-06T18:03:14.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "YouTube Rewind 2018: Behind the Scenes | #YouTubeRewind",
+"description": "Behind the scenes of YouTube Rewind 2018, the epic year-end celebration of the videos, people, music and moments that mattered the most to you in 2018.",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/8qTQbk2A02M/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/8qTQbk2A02M/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/8qTQbk2A02M/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/ARs4_Ns7526c-hQG-Emiz3Gzs-I\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "YbJOTdZBX1g"
+},
+"snippet": {
+"publishedAt": "2018-12-06T17:58:29.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "YouTube Rewind 2018: Everyone Controls Rewind | #YouTubeRewind",
+"description": "YouTube Rewind 2018. Celebrating the videos, people, music and moments that defined 2018. #YouTubeRewind It wouldn't be Rewind without the creators: ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/YbJOTdZBX1g/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/YbJOTdZBX1g/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/YbJOTdZBX1g/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/w6m5lUwYaNl8o-btTYcNuAqYBbM\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "8gE5xkyzqhs"
+},
+"snippet": {
+"publishedAt": "2018-12-03T18:00:00.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "Get Ready for YouTube Rewind 2018 | #RewindIsComing",
+"description": "It's almost time to hit Rewind, #RewindisComing. YouTube Rewind 2018 releases on December 6th (10 am PST). Get ready to see the videos, people, music ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/8gE5xkyzqhs/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/8gE5xkyzqhs/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/8gE5xkyzqhs/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/03ZYYN6WYuCa0NNWfddSjmxaKH4\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "qM-dOYiyvCA"
+},
+"snippet": {
+"publishedAt": "2018-11-29T17:02:22.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "YouTube Stories | Fashion by Ally",
+"description": "Stories is available to eligible creators with over 10000 subscribers. Get inspired and discover how Stories can give your fans a backstage pass. Learn More: ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/qM-dOYiyvCA/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/qM-dOYiyvCA/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/qM-dOYiyvCA/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/3ccX0s3_Bo9uk8G97sbpSvd_G94\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "lepYkDZ62OY"
+},
+"snippet": {
+"publishedAt": "2018-11-19T00:02:39.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "#SaveYourInternet",
+"description": "Imagine if you couldn't watch the videos you love. We support copyright reform with an Article 13 that works for everyone.",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/lepYkDZ62OY/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/lepYkDZ62OY/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/lepYkDZ62OY/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/07YjaLTzBtgxs1RbY15znb73U3E\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "UNYX47-M7MI"
+},
+"snippet": {
+"publishedAt": "2018-11-12T13:00:44.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "Race | ‘In My Personal Space’ Feat. Michael Dapaah | #CreatorsforChange",
+"description": "From singing Backstreet Boys medleys to proving people wrong, Nadir tackles the subject of Race with the help of Michael Dapaah. As part of YouTube ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/UNYX47-M7MI/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/UNYX47-M7MI/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/UNYX47-M7MI/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/AEcTI_lYPlYYNZu4YQ4Y4OWXdX4\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "rMOlZpzpYqM"
+},
+"snippet": {
+"publishedAt": "2018-11-12T13:00:51.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "Fitting In | ‘In My Personal Space’ Feat. Alesha Dixon | #CreatorsforChange",
+"description": "From lazy brains to lazier stereotypes, Nadir tackles the subject of Fitting In with the help of Alesha Dixon. As part of YouTube #CreatorsforChange, Nadir Nahdi ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/rMOlZpzpYqM/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/rMOlZpzpYqM/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/rMOlZpzpYqM/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/lFuGuIKhq2xWRaytpDkM7akNPic\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "WbDk6SC_SUs"
+},
+"snippet": {
+"publishedAt": "2018-11-12T13:00:12.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "One View Can Create Change | #CreatorsforChange 2018 (:15)",
+"description": "Creators around the world are making videos that opens minds, promote harmony and inspire togetherness. Because no matter your message, when you share ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/WbDk6SC_SUs/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/WbDk6SC_SUs/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/WbDk6SC_SUs/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/M_GK_B1odPLeVaBGcRZBITig3qg\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "r-FwYQDV29E"
+},
+"snippet": {
+"publishedAt": "2018-11-12T13:00:05.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "One View Can Create Change | #CreatorsforChange 2018 (:30)",
+"description": "Creators around the world are making videos that opens minds, promote harmony and inspire togetherness. Because no matter your message, when you share ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/r-FwYQDV29E/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/r-FwYQDV29E/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/r-FwYQDV29E/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/dmNixk4pAHkL81rHo13yhqoxvvs\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "ewSt0_4-jNM"
+},
+"snippet": {
+"publishedAt": "2018-11-12T13:00:27.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "Gender | ‘In My Personal Space’ Feat. Lily Cole, Sid &amp; Dina | #CreatorsforChange",
+"description": "From gender imbalances to the question of who pays the bill, Nadir tackles the subject of Gender with the help of Lily Cole, Sid & Dina. As part of YouTube ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/ewSt0_4-jNM/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/ewSt0_4-jNM/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/ewSt0_4-jNM/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/d24KI3mHy8HdOT1A2PNvu3Mg2i0\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "UgJgPtRwPWI"
+},
+"snippet": {
+"publishedAt": "2018-11-12T13:00:39.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "Love | ‘In My Personal Space’ Feat. Tom Daley and Fern Brady | #CreatorsforChange",
+"description": "From coming out to hiding in plain sight, Nadir tackles the subject of Love with the help of Tom Daley and Fern Brady. As part of YouTube #CreatorsforChange, ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/UgJgPtRwPWI/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/UgJgPtRwPWI/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/UgJgPtRwPWI/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/G811glPKiedUyD5J0JLh2LyJ8eE\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "BjnoLtG2NKY"
+},
+"snippet": {
+"publishedAt": "2018-11-12T13:01:07.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "Mental Health | ‘In My Personal Space’ Feat. Pro Green and Humza | #CreatorsforChange",
+"description": "From hugs with your dad to telling your friends you love them, Nadir tackles the subject of Mental Health with the help of Pro Green and Humza. As part of ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/BjnoLtG2NKY/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/BjnoLtG2NKY/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/BjnoLtG2NKY/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/p3iySbgtAVbaQPfuvVNY2b8tc-g\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "_6MtoR8JGTo"
+},
+"snippet": {
+"publishedAt": "2018-11-12T12:59:34.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "One View Can Create Change | #CreatorsforChange 2018",
+"description": "Creators around the world are making videos that opens minds, promote harmony and inspire togetherness. Because no matter your message, when you share ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/_6MtoR8JGTo/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/_6MtoR8JGTo/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/_6MtoR8JGTo/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+},
+{
+"kind": "youtube#searchResult",
+"etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/9_Doq4G8hiORJ5ckzMasKax6Alg\"",
+"id": {
+"kind": "youtube#video",
+"videoId": "uY1cm-7PBes"
+},
+"snippet": {
+"publishedAt": "2018-10-22T14:27:54.000Z",
+"channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+"title": "YouTube Stories | Chef May: Rediscovering The Taste of Home",
+"description": "May became a celebrated chef in Manchester, England after learning to cook the flavors of her childhood in Thailand by watching YouTube. Find something new ...",
+"thumbnails": {
+"default": {
+"url": "https://i.ytimg.com/vi/uY1cm-7PBes/default.jpg",
+"width": 120,
+"height": 90
+},
+"medium": {
+"url": "https://i.ytimg.com/vi/uY1cm-7PBes/mqdefault.jpg",
+"width": 320,
+"height": 180
+},
+"high": {
+"url": "https://i.ytimg.com/vi/uY1cm-7PBes/hqdefault.jpg",
+"width": 480,
+"height": 360
+}
+},
+"channelTitle": "YouTube",
+"liveBroadcastContent": "none"
+}
+}
+]
+}
+
