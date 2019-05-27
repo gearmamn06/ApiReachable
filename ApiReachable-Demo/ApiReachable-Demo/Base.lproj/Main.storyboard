@@ -166,7 +166,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoSearchCell" rowHeight="341" id="Zo3-qq-zoh" customClass="VideoSearchCell" customModule="ApiReachable_Demo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoSearchCell" rowHeight="341" id="Zo3-qq-zoh" customClass="VideoSearchCell" customModule="ApiReachable_Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="341"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zo3-qq-zoh" id="FVD-I9-6se">
@@ -186,7 +186,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX2-wT-YL9">
-                                                    <rect key="frame" x="16" y="252.5" width="382" height="18"/>
+                                                    <rect key="frame" x="16" y="248.5" width="382" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -200,8 +200,8 @@
                                                 <constraint firstItem="zX2-wT-YL9" firstAttribute="leading" secondItem="iWx-Hr-GgY" secondAttribute="leading" id="XmM-Xj-ImU"/>
                                                 <constraint firstItem="KiA-eN-iT5" firstAttribute="top" secondItem="FVD-I9-6se" secondAttribute="top" constant="4" id="Z4O-Wi-YYD"/>
                                                 <constraint firstItem="iWx-Hr-GgY" firstAttribute="leading" secondItem="KiA-eN-iT5" secondAttribute="leading" id="h7M-HV-XDM"/>
-                                                <constraint firstItem="zX2-wT-YL9" firstAttribute="top" secondItem="iWx-Hr-GgY" secondAttribute="bottom" constant="12" id="s1C-7h-gKa"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zX2-wT-YL9" secondAttribute="bottom" constant="8" id="t0Z-3l-uG2"/>
+                                                <constraint firstItem="zX2-wT-YL9" firstAttribute="top" secondItem="iWx-Hr-GgY" secondAttribute="bottom" constant="8" id="s1C-7h-gKa"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zX2-wT-YL9" secondAttribute="bottom" constant="12" id="t0Z-3l-uG2"/>
                                                 <constraint firstAttribute="trailing" secondItem="KiA-eN-iT5" secondAttribute="trailing" constant="16" id="wii-6W-Fyx"/>
                                             </constraints>
                                         </tableViewCellContentView>

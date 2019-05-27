@@ -11,21 +11,6 @@ import RxSwift
 import RxCocoa
 
 
-enum TableViewUpdate {
-    case reloadAll
-    case inser(at: [IndexPath])
-    case delete(at: [IndexPath])
-    case move(from: IndexPath, to: IndexPath)
-    case none
-    
-    var isNone: Bool {
-        switch self {
-        case .none: return true
-        default: return false
-        }
-    }
-}
-
 
 class ChannelViewModel {
     
@@ -54,7 +39,7 @@ class ChannelViewModel {
     private let _update = PublishSubject<TableViewUpdate>()
     private let _errorMessage = PublishSubject<String>()
     private let _isFetching = BehaviorSubject<Bool>(value: false)
-    private let _nextChannelID = PublishSubject<String>()
+    private let _nextChannelInfo = PublishSubject<(String, String)>()
     
     
     // output
@@ -70,9 +55,9 @@ class ChannelViewModel {
         return _isFetching.map{ $0 }
             .asDriver(onErrorJustReturn: false)
     }
-    var nextChannelID: Signal<String> {
-        return _nextChannelID.asSignal(onErrorJustReturn: "")
-            .filter{ !$0.isEmpty }
+    var nextChannelInfo: Signal<(String, String)> {
+        return _nextChannelInfo.asSignal(onErrorJustReturn: ("", ""))
+            .filter{ !$0.0.isEmpty }
     }
 }
 
@@ -119,14 +104,13 @@ extension ChannelViewModel {
         
         Observable.zip(_isFetching, loadMoreTrigger)
             .compactMap { [weak self] flag, void -> (String, String?)? in
-                if self != nil && !flag {
-                    return (channelType, self!.nextPageToken)
+                if let self = self, !flag {
+                    return (channelType, self.nextPageToken)
                 }
                 return nil
             }
             .do(onNext: { [weak self] _ in
                 self?._isFetching.onNext(true)
-                print("load more..")
             })
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .flatMapLatest { (type: String, token: String?) -> Observable<PageResult<ChannelSearch>> in
@@ -149,7 +133,7 @@ extension ChannelViewModel {
                 guard lastIndex >= 0 && self.cellViewModels.count-1 > lastIndex else { return }
                 let newIndexPaths = (lastIndex..<self.cellViewModels.count)
                     .map{ IndexPath(row: $0, section: 0) }
-                self._update.onNext(.inser(at: newIndexPaths))
+                self._update.onNext(.insert(at: newIndexPaths))
                 
                 self._isFetching.onNext(false)
                 
@@ -163,10 +147,11 @@ extension ChannelViewModel {
     
     private func bindItemTap() {
         itemDidTap
-            .compactMap { [weak self] (index: IndexPath) -> String? in
+            .compactMap { [weak self] (index: IndexPath) -> (String, String)? in
                 guard let self = self else { return nil }
-                return self.cellViewModels[index.row].title
-            }.bind(to: _nextChannelID)
+                let cellVieWModel = self.cellViewModels[index.row]
+                return (cellVieWModel.channelID, cellVieWModel.title)
+            }.bind(to: _nextChannelInfo)
             .disposed(by: bag)
     }
 }

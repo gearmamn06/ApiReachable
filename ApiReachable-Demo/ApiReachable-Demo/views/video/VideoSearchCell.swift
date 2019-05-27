@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 struct VideoSearchCellViewModel {
     
-    let imageUrl: URL
+    let videoID: String
+    let imageUrl: URL?
     let title: String
     let description: String
+    
+    init(_ video: VideoSearch) {
+        self.videoID = video.videoId
+        self.imageUrl = video.thumbnail.properURL(with: ["high", "medium", "default"])
+        self.title = video.title
+        self.description = video.description
+    }
 }
 
 class VideoSearchCell: UITableViewCell, ConfigurableCell {
@@ -24,11 +33,18 @@ class VideoSearchCell: UITableViewCell, ConfigurableCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    
+    override func awakeFromNib() {
+        self.selectionStyle = .none
+    }
+    
     func setUpSubViews(_ viewModel: VideoSearchCellViewModel) {
-        if let data = try? Data(contentsOf: viewModel.imageUrl) {
-            self.thumbnailImageView.image = UIImage(data: data)
+        
+        if let url = viewModel.imageUrl {
+            thumbnailImageView.kf.setImage(with: url)
+            thumbnailImageView.contentMode = .scaleAspectFill
         }else{
-            self.thumbnailImageView.image = nil
+            thumbnailImageView.image = nil
         }
         
         self.titleLabel.text = viewModel.title

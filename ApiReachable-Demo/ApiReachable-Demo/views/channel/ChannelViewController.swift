@@ -34,8 +34,8 @@ class ChannelViewController: UIViewController {
         setUpNavigationBar()
         setUpTableView()
         
-        bindFetching()
-        bindNextViewControllerMovement()
+        subscribeFetching()
+        subscribeNextViewControllerMovement()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
             self.viewModel.refresh.accept(())
@@ -50,7 +50,7 @@ class ChannelViewController: UIViewController {
 
 extension ChannelViewController {
     
-    private func bindFetching() {
+    private func subscribeFetching() {
         
         setUpActivityIndicator()
         
@@ -60,10 +60,10 @@ extension ChannelViewController {
             }else{
                 self?.activityIndicator.stopAnimating()
             }
-            let clearBlockUI = !show
-            self?.view.isUserInteractionEnabled = clearBlockUI
-            self?.tableView.isScrollEnabled = clearBlockUI
-            self?.navigationItem.rightBarButtonItem?.isEnabled = clearBlockUI
+            let clearUIBlock = !show
+            self?.view.isUserInteractionEnabled = clearUIBlock
+            self?.tableView.isScrollEnabled = clearUIBlock
+            self?.navigationItem.rightBarButtonItem?.isEnabled = clearUIBlock
             
         }).disposed(by: bag)
         
@@ -75,7 +75,7 @@ extension ChannelViewController {
                 self?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0),
                                             at: .top, animated: true)
                 
-            case .inser(let indexPaths):
+            case .insert(let indexPaths):
                 self?.tableView.insertRows(at: indexPaths, with: .automatic)
                 
             default: break
@@ -99,11 +99,12 @@ extension ChannelViewController {
 
 extension ChannelViewController {
     
-    private func bindNextViewControllerMovement() {
-        viewModel.nextChannelID
-            .emit(onNext: { [weak self] channelID in
+    private func subscribeNextViewControllerMovement() {
+        viewModel.nextChannelInfo
+            .emit(onNext: { [weak self] info in
                 let dest = VideoSearchViewController.instance
-                dest.channelID = channelID
+                dest.channelID = info.0
+                dest.channelTitle = info.1
                 
                 self?.navigationController?.pushViewController(dest, animated: true)
             })
@@ -119,9 +120,7 @@ extension ChannelViewController {
     
     private func setUpNavigationBar() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshButtonDidTap))
-        self.navigationItem.leftBarButtonItem?.title = ""
         self.title = category?.title ?? "Unknown"
-        
     }
     
     @objc private func refreshButtonDidTap() {
