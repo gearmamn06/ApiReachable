@@ -106,7 +106,7 @@ extension ApiReachable_DemoTests {
             case .success(let model):
                 responseModel = model
                 
-            case .fail(let error):
+            case .failure(let error):
                 responseError = error
             }
             
@@ -133,7 +133,7 @@ extension ApiReachable_DemoTests {
             case .success(let model):
                 responseModel = model
                 
-            case .fail(let error):
+            case .failure(let error):
                 responseError = error
             }
             
@@ -160,7 +160,7 @@ extension ApiReachable_DemoTests {
             case .success(let model):
                 responseModel = model
                 
-            case .fail(let error):
+            case .failure(let error):
                 responseError = error
             }
             
