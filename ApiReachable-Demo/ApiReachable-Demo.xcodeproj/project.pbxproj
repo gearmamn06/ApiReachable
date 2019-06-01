@@ -456,11 +456,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ApiReachable-DemoTests/Pods-ApiReachable-DemoTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS12.2/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS12.2/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS12.2/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS12.2/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay-iOS12.2/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -486,12 +486,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ApiReachable-Demo/Pods-ApiReachable-Demo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS10.0/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS10.0/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS10.0/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS10.0/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay-iOS10.0/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (

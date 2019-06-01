@@ -1,12 +1,12 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ApiReachable"
-  spec.version      = "0.1.3"
+  spec.version      = "0.1.4"
   spec.summary      = "Embed networking logic in your model."
 
 
   spec.description  = <<-DESC
-                      Embed networking logic in your model.
+                      Model based networking module using Alamofire
                       DESC
 
   spec.homepage     = "https://github.com/gearmamn06/ApiReachable"
@@ -40,7 +40,7 @@ SOFTWARE.
   spec.author             = { "gearmamn06" => "gearmamn06@gmail.com" }
 
 
-  # spec.swift_version = "4.2"
+  spec.swift_version = "5.0"
   spec.platform     = :ios
   # spec.platform     = :ios, "10.0"
 
@@ -50,12 +50,16 @@ SOFTWARE.
   # spec.source       = { :git => "https://github.com/gearmamn06/AnimationSeries.git", :tag => spec.version }
 
   # spec.ios.vendored_frameworks = 'AnimationSeries.framework'
-  # spec.source_files  = ["AnimationSeries/Sources/**/*.swift", "AnimationSeries/Sources/AnimationSeries.h"]
-  # spec.public_header_files = ["AnimationSeries/Sources/AnimationSeries.h"]
+  spec.source_files  = ["Sources/*.swift", "Sources/ApiReachable.h"]
+  spec.public_header_files = ["Sources/ApiReachable.h"]
   spec.source = { :git => "https://github.com/gearmamn06/ApiReachable.git", :tag => spec.version }
   # spec.source = { :http => 'https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-291822295618/AnimationSeriesFramework.zip'}
   # spec.exclude_files = "Classes/Exclude"
   # spec.public_header_files = ["AnimationSeries/Sources/AnimationSeries.h"]
   spec.requires_arc = true
+
+  spec.dependency 'ObjectMapper', '~> 3.4'
+  spec.dependency 'Alamofire', '~> 4.8.2'
+  spec.dependency 'RxSwift', '~> 5.0'
 
 end
