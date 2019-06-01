@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ApiReachable"
-  spec.version      = "0.1.0"
+  spec.version      = "0.1.1"
   spec.summary      = "Embed networking logic in your model."
 
 
