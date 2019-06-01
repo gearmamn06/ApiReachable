@@ -168,16 +168,16 @@ extension ApiReachableTests {
         var responseError: Error?
         
         // when
-        MappableItuenseSearchResult.reach(method: .get, queries: queries, completeHandler: { result in
+        MappableItuenseSearchResult.reach(method: .get, queries: queries) { result in
             switch result {
             case .success(let model):
                 responseModel = model
                 
-            case .fail(let error):
+            case .failure(let error):
                 responseError = error
             }
             promise.fulfill()
-        })
+        }
         
         waitForExpectations(timeout: 5, handler: nil)
         
@@ -265,16 +265,16 @@ extension ApiReachableTests {
         var responseError: Error?
         
         // when
-        DecodableItuenseSearResult.reach(method: .get, queries: queries, completeHandler: { result in
+        DecodableItuenseSearResult.reach(method: .get, queries: queries){ result in
             switch result {
             case .success(let model):
                 responseModel = model
                 
-            case .fail(let error):
+            case .failure(let error):
                 responseError = error
             }
             promise.fulfill()
-        })
+        }
         
         waitForExpectations(timeout: 5, handler: nil)
         

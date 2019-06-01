@@ -20,35 +20,32 @@ public enum ApiBaseError: Error {
 }
 
 
-public enum ApiResult<T> {
-    case success(model: T)
-    case fail(error: Error)
-}
-
-
 public protocol ApiReachable {
     static var baseURL: URL { get }
     static var endPoint: String { get }
     static var requiredParams: [String: Any] { get }
+    static var header: [String: String]? { get }
+    static var encoding: ParameterEncoding { get }
     
     static func reach(method: HTTPMethod,
                       queries: [String: Any],
-                      completeHandler: @escaping (ApiResult<Self>) -> Void)
+                      _ completeHandler: @escaping (Result<Self>) -> Void)
 }
 
 
 public extension ApiReachable {
     
+    static var header: [String: String]? {
+        return nil
+    }
+    
+    static var encoding: ParameterEncoding {
+        return URLEncoding.default
+    }
+    
     static var finalURL: URL {
         return baseURL.appendingPathComponent(endPoint)
     }
-    
-    
-    private static var mappingQueue: DispatchQueue {
-        return DispatchQueue(label: "mapping\(Int.random(in: 0..<1000000000))",
-            qos: .userInitiated, attributes: [.concurrent])
-    }
-
 }
 
 
@@ -56,10 +53,10 @@ public extension ApiReachable where Self: BaseMappable {
     
     static func reach(method: HTTPMethod,
                       queries: [String: Any] = [:],
-                      completeHandler: @escaping (ApiResult<Self>) -> Void) {
+                      _ completeHandler: @escaping (Result<Self>) -> Void) {
 
         if !isConnectedNet() {
-            completeHandler(ApiResult.fail(error: ApiBaseError.noInternetConnection))
+            completeHandler(.failure(ApiBaseError.noInternetConnection))
             return
         }
 
@@ -68,29 +65,23 @@ public extension ApiReachable where Self: BaseMappable {
             finalParams[$0.key] = $0.value
         }
 
-        Alamofire.request(finalURL, method: method, parameters: finalParams)
-            .responseJSON(queue: mappingQueue,
-                          options: .allowFragments, completionHandler: { response in
-
+        Alamofire.request(finalURL, method: method, parameters: finalParams,
+                          encoding: encoding, headers: header)
+            .responseJSON { response in
+                
                 switch response.result {
                 case .success(let json):
                     if let sender = Mapper<Self>().map(JSONObject: json) {
-                        DispatchQueue.main.async {
-                            completeHandler(ApiResult.success(model: sender))
-                        }
+                        completeHandler(.success(sender))
+                        
                     }else{
-                        DispatchQueue.main.async {
-                            completeHandler(ApiResult.fail(error: ApiBaseError.mappingFail(json)) )
-                        }
+                        completeHandler(.failure(ApiBaseError.mappingFail(json)))
                     }
-
+                    
                 case .failure(let error):
-                    DispatchQueue.main.async {
-                        completeHandler(ApiResult.fail(error: error))
-                    }
-
+                    completeHandler(.failure(error))
                 }
-            })
+        }
     }
 }
 
@@ -99,10 +90,10 @@ public extension ApiReachable where Self: Decodable {
     
     static func reach(method: HTTPMethod,
                       queries: [String: Any] = [:],
-                      completeHandler: @escaping ((ApiResult<Self>) -> Void)) {
+                      _ completeHandler: @escaping ((Result<Self>) -> Void)) {
         
         if !isConnectedNet() {
-            completeHandler(ApiResult.fail(error: ApiBaseError.noInternetConnection))
+            completeHandler(.failure(ApiBaseError.noInternetConnection))
             return
         }
         
@@ -111,23 +102,24 @@ public extension ApiReachable where Self: Decodable {
             finalParams[$0.key] = $0.value
         }
         
-        Alamofire.request(finalURL, method: method, parameters: finalParams)
-            .responseData(completionHandler: { response in
+        Alamofire.request(finalURL, method: method, parameters: finalParams,
+                          encoding: encoding, headers: header)
+            .responseData { response in
+                
                 switch response.result {
                 case .success(let value):
                     if let sender = try? JSONDecoder().decode(self, from: value) {
-                        DispatchQueue.main.async {
-                            completeHandler(ApiResult.success(model: sender))
-                        }
+                        completeHandler(.success(sender))
+                    }else{
+                        completeHandler(.failure(ApiBaseError.mappingFail(value)))
                     }
                     
                 case .failure(let error):
                     DispatchQueue.main.async {
-                        completeHandler(ApiResult.fail(error: error))
+                        completeHandler(.failure(error))
                     }
                 }
-            })
-        
+        }
     }
 }
 
@@ -136,17 +128,18 @@ public extension ApiReachable {
     
     static func reach(method: HTTPMethod, queries: [String: Any] = [:]) -> Observable<Self> {
         return Observable.create { observer in
-            self.reach(method: method, queries: queries, completeHandler: { result in
+            self.reach(method: method, queries: queries) { result in
                 
                 switch result {
                 case let .success(model):
                     observer.onNext(model)
                     observer.onCompleted()
                     
-                case let .fail(error):
+                case let .failure(error):
                     observer.onError(error)
+                    
                 }
-            })
+            }
             return Disposables.create()
         }
     }

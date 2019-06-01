@@ -44,18 +44,18 @@ extension CategoryListViewController {
     private func refresh() {
 
         self.navigationItem.rightBarButtonItem?.isEnabled = false
-        PageResult<GuideCategory>.reach(method: .get, completeHandler: { result in
+        PageResult<GuideCategory>.reach(method: .get) { result in
             switch result {
             case .success(let page):
                 self.categoris = page.items
                 self.tableView.reloadData()
                 
-            case .fail(let error):
+            case .failure(let error):
                 self.showErrorAlert(message: error.localizedDescription)
             }
             
             self.navigationItem.rightBarButtonItem?.isEnabled = true
-        })
+        }
     }
 }
 
