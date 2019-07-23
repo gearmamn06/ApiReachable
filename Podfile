@@ -8,6 +8,8 @@ def shared
   pod 'ObjectMapper', '~> 3.4'
   pod 'Alamofire', '~> 4.8.2'
   pod 'RxSwift',    '~> 5.0'
+  pod 'Quick'
+  pod 'Nimble'
 end
 
 target 'ApiReachable' do

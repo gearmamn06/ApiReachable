@@ -1,7 +1,9 @@
 PODS:
   - Alamofire (4.8.2)
   - Kingfisher (5.5.0)
+  - Nimble (8.0.2)
   - ObjectMapper (3.4.2)
+  - Quick (2.1.0)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -12,7 +14,9 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
   - Kingfisher (~> 5.0)
+  - Nimble
   - ObjectMapper (~> 3.4)
+  - Quick
   - RxCocoa (~> 5.0)
   - RxSwift (~> 5.0)
 
@@ -20,7 +24,9 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Kingfisher
+    - Nimble
     - ObjectMapper
+    - Quick
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -28,11 +34,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
 
-PODFILE CHECKSUM: 56e1d36ac7f8215b54141f425de5107b99233a71
+PODFILE CHECKSUM: c34abb91cb01b94c193886d63669c101ab6b5a31
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.7.4
